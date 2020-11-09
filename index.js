@@ -37,6 +37,10 @@ let mentors = [
   },
 ];
 
+app.get("/", function (req, res) {
+  res.json("Server is up and running. Please proceed to defined endpoints");
+});
+
 app.get("/students/:mentorId", function (req, res) {
   if (req.params.mentorId) {
     let list = [];
@@ -152,4 +156,4 @@ app.get("/unassignedmentors/:studentId", function (req, res) {
     });
   });
 
-app.listen(3001);
+app.listen(3000);
